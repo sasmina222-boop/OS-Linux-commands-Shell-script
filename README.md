@@ -42,23 +42,25 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
-
+![Alt text](img_exo1/img_ex01_1.png)
 
 cat < file2
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_2.png)
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+![Alt text](img_exo1/img_ex01_3.png) 
+
 comm file1 file2
  ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_4.png)
  
 diff file1 file2
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_5.png)
 
 
 #Filters
@@ -78,22 +80,18 @@ cat > file22
 1003 | Joe |  7000 | Developer
 ^d
 ```
-
-
 cut -c1-3 file11
 ## OUTPUT
-
-
-
+![Alt text](img_exo1/img_ex01_6.png)
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_7.png)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_7(ii).png)
 
 cat < newfile 
 ```
@@ -107,40 +105,40 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_8.png)
 
 
 grep hello newfile 
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_9.png)
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_10.png)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_11.png)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_12.png)
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_13.png)
 
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_14.png)
 
 cat < newfile 
 ```
@@ -163,60 +161,63 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_15.png)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_16.png)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_17.png)
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_18(3).png)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_18(3).png)
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_18(3).png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+![Alt text](img_exo1/img_ex01_19(3).png)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
 
+![Alt text](img_exo1/img_ex01_19(3).png)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
 
+![Alt text](img_exo1/img_ex01_19(3).png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_21(3).png)
 
 egrep l{2} newfile
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_21(3).png)
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![Alt text](img_exo1/img_ex01_21(3).png)
 
 cat > file23
 ```
@@ -234,79 +235,76 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_22.png)
 
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_23.png)
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_24.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_25.png)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_26.png)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_27.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_28.png)
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_29.png)
 
 seq 10 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_30.png)
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_31(2).png)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_31(2).png)
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_32(3).png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_32(3).png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_32(3).png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
-
-
-sed -n '2,4{s/$/*/;p}' file23
+![Alt text](img_exo1/img_ex01_33.png)
 
 
 #Sorting File content
@@ -320,7 +318,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_34.png)
 
 cat > file22
 ```
@@ -334,13 +332,13 @@ cat > file22
 uniq file22
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_35.png)
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-
+ ![Alt text](img_exo1/img_ex01_36.png)
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -357,17 +355,19 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_38.png)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
+![Alt text](img_exo1/img_ex01_39.png)
 
 
 #Backup commands
+
 tar -cvf backup.tar *
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_40.png)
 
 mkdir backupdir
  
@@ -377,19 +377,19 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_41.png)
 
 tar -xvf backup.tar
 ## OUTPUT
-
-gzip backup.tar
+![Alt text](img_exo1/img_ex01_42.png)
 
 ls .gz
 ## OUTPUT
- 
+  ![Alt text](img_exo1/img_ex01_43.png)
+  
 gunzip backup.tar.gz
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_44.png)
  
 # Shell Script
 ```
@@ -397,9 +397,10 @@ echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
+
 ./my-script.sh
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_45.png)
  
 cat << stop > herecheck.txt
 ```
@@ -411,11 +412,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_46.png)
 
 cat < scriptest.sh 
 ```bash
-\#!/bin/sh
+#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -431,7 +432,7 @@ ps
 
 cat scriptest.sh 
 ```bash
-\#!/bin/sh
+#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -450,30 +451,35 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
+ ![Alt text](img_exo1/img_ex01_47.png)
  
 ls file1
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_48(4).png)
 
 echo $?
 ## OUTPUT 
+![Alt text](img_exo1/img_ex01_48(4).png)
+
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+ ![Alt text](img_exo1/img_ex01_48(4).png)
  
 abcd
  
 echo $?
- ## OUTPUT
+## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_48(4).png)
  
 # mis-using string comparisons
 
 cat < strcomp.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -487,7 +493,7 @@ fi
 
 cat strcomp.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -497,20 +503,21 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
+## OUTPUT
 
 
+![Alt text](img_exo1/img_ex01_49.png)
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_50.png)
 
 # check file ownership
-cat < psswdperm.sh 
+cat > psswdperm.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -O /etc/passwd ]
 then
 echo “You are the owner of the /etc/passwd file”
@@ -522,7 +529,7 @@ fi
 
 cat psswdperm.sh 
 ```bash
-/#!/bin/bash
+#!/bin/bash
 if [ -O /etc/passwd ]
 then
 echo “You are the owner of the /etc/passwd file”
@@ -532,11 +539,12 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_51.png)
 
 # check if with file location
-cat>ifnested.sh 
+cat > ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -579,7 +587,7 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
-
+![Alt text](img_exo1/img_ex01_52.png)
 
 # using numeric test comparisons
 cat > iftest.sh 
@@ -618,15 +626,16 @@ echo “The values are different”
 fi
 ```
 
-$ chmod 755 iftest.sh
+chmod 755 iftest.sh
  
-$ ./iftest.sh 
-##OUTPUT
+./iftest.sh 
+## OUTPUT
+![Alt text](img_exo1/img_ex01_53.png)
 
 # check if a file
 cat > ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -648,7 +657,7 @@ fi
 
 cat ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -667,15 +676,16 @@ echo “Sorry, the object does not exist”
 fi
 ```
 
-$ chmod 755 ifnested.sh
+chmod 755 ifnested.sh
  
-$ ./ifnested.sh 
-##OUTPUT
+./ifnested.sh 
+## OUTPUT
+![Alt text](img_exo1/img_ex01_54.png)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ $USER = Ram ]
 then
 echo "Welcome $USER"
@@ -695,11 +705,11 @@ echo "Sorry, you are not allowed here"
 fi
 ```
 
-$ chmod 755 elifcheck.sh
+chmod 755 elifcheck.sh
  
-$ ./elifcheck.sh 
+./elifcheck.sh 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_55.png)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -712,12 +722,14 @@ else
 echo "I cannot write to the file"
 fi
 ```
-$ chmod 755 ifcompound.sh
-$ ./ifcompound.sh 
+chmod 755 ifcompound.sh
+
+./ifcompound.sh 
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_56.png)
 
 # using the case command
-cat >casecheck.sh 
+cat > casecheck.sh 
 ```bash
 case $USER in
 Ram | Robert)
@@ -731,9 +743,12 @@ echo "$USER, Do not forget to log off when you're done";;
 echo "Sorry, you are not allowed here";;
 esac
 ```
-$ chmod 755 casecheck.sh 
+chmod 755 casecheck.sh 
  
-$ ./casecheck.sh 
+./casecheck.sh 
+
+## OUTPUT
+![Alt text](img_exo1/img_ex01_57.png)
  
 cat > whiletest
 ```bash
@@ -749,11 +764,14 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
+
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_58.png)
  
  
-cat untiltest.sh 
+cat > untiltest.sh 
 ```bash
-\#using the until command
+#using the until command
 var1=100
 until [ $var1 -eq 0 ]
 do
@@ -762,13 +780,16 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
- 
+$ ./untiltest.sh
+
+## OUTPUT
+  ![Alt text](img_exo1/img_ex01_59.png)
  
  
 cat forin1.sh 
 ```bash
-\#!/bin/bash
-\#basic for command
+#!/bin/bash
+#basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
@@ -776,43 +797,42 @@ done
  ```
  
 $ chmod 755 forin1.sh
+$ ./ forin1.sh
  
- 
+ ## OUTPUT
+ ![Alt text](img_exo1/img_ex01_60.png)
+  
 cat forin2.sh 
 ```bash
-\#!/bin/bash
-\# another example of how not to use the for command
+#!/bin/bash
+# another example of how not to use the for command
 for test in I don't know if this'll work
 do
 echo “word:$test”
 done
  ```
  
-$ chmod 755 forin2.sh
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
+
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
+
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_61.png)
  
 cat forin3.sh 
 ```bash
-\#!/bin/bash
-\# another example of how not to use the for command
+#!/bin/bash
+# another example of how not to use the for command
 for test in I don\'t know if "this'll" work
 do
 echo "word:$test"
 done
 ```
+$  chmod 755 forin3.sh
 $ ./forin3.sh 
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_63.png)
  
 cat forin1.sh 
 ```bash
@@ -824,8 +844,11 @@ echo The next state is $test
 done
 ```
 $ chmod 755 forin1.sh
+$ forin1.sh
 
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_64.png)
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -847,9 +870,9 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_65.png)
 
-
-cat forctype.sh 
+cat > forctype.sh 
 ```bash
 #!/bin/bash
 # testing the C-style for loop
@@ -861,6 +884,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_66.png)
 
 cat forctype1.sh 
 ```bash
@@ -874,6 +898,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+![Alt text](img_exo1/img_ex01_66.png)
 
 cat fornested1.sh 
 ```bash
@@ -892,9 +917,9 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_67.png)
  
-cat forbreak.sh 
+cat > forbreak.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -908,13 +933,15 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
+
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_68.png)
  
-cat forbreak.sh 
+cat forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -934,8 +961,8 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
-cat exread.sh 
+ ![Alt text](img_exo1/img_ex01_69.png)
+cat > exread.sh 
 ```bash
 #!/bin/bash
 # testing the read command
@@ -948,7 +975,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+![Alt text](img_exo1/img_ex01_70.png)
 
  cat exread1.sh
 ```bash
@@ -959,13 +986,14 @@ echo "Hello $name, welcome to my program. “
 ``` 
 $ chmod 755 exread1.sh 
 
+$ ./exread1.sh 
+
 ## OUTPUT
 
+ ![Alt text](img_exo1/img_ex01_71.png)
 
-
-$ ./exread1.sh 
  
-cat funcex.sh
+cat > funcex.sh
 ```bash
 #!/bin/bash
 # trying to access script parameters inside a function
@@ -980,14 +1008,16 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
+
  ./funcex.sh 
 
  
  ./funcex.sh 1 2
 
+## OUTPUT
+![Alt text](img_exo1/img_ex01_72.png)
  
-cat argshift.sh
+cat > argshift.sh
 ```bash
 #!/bin/bash 
  while (( "$#" )); do 
@@ -997,8 +1027,10 @@ done
 ```
 $ chmod 777 argshift.sh
 
-## OUTPUT
 $ ./argshift.sh 1 2 3
+
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_73.png)
  
  cat argshift1.sh
 ```bash
@@ -1014,10 +1046,13 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
+
 $ ./argshift.sh 1 2 3
+
+## OUTPUT
+ ![Alt text](img_exo1/img_ex01_74.png)
  
-cat argshift.sh
+cat > argshift.sh
 ```bash
 #!/bin/bash 
 set -x 
@@ -1027,9 +1062,12 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
- ./argshift.sh 1 2 3
- 
+
+$  chmod 777 argshift.sh
+
+$ ./argshift.sh 1 2 3
+## OUTPUT 
+ ![Alt text](img_exo1/img_ex01_75.png)
  
 cat > nc.awk
 ```bash
@@ -1060,6 +1098,7 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+ ![Alt text](img_exo1/img_ex01_76.png)
  
 cat > palindrome.sh
 ```bash
@@ -1086,8 +1125,10 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
-## OUTPUT 
+$ ./palindrome.sh
 
+## OUTPUT 
+![Alt text](img_exo1/img_ex01_77.png)
 
 # RESULT:
 The Commands are executed successfully.
